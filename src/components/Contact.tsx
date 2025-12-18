@@ -104,8 +104,8 @@ export function Contact() {
                   <div className="flex items-start gap-3">
                     <Clock className="text-emerald-600 flex-shrink-0 mt-1" size={20} />
                     <div className="space-y-1">
-                      <p>Monday - Thursday: 11:00 AM - 11:00 PM</p>
-                      <p>Friday - Sunday: 11:00 AM - 12:00 AM</p>
+                      <p>Wednesday-Monday: 11:00 AM - 10:00 PM</p>
+                      {/* <p>Friday - Sunday: 11:00 AM - 12:00 AM</p> */}
                       <p className="text-sm text-gray-600 mt-2">Last orders 30 minutes before closing</p>
                     </div>
                   </div>

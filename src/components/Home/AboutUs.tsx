@@ -39,7 +39,12 @@ export function AboutUs() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="space-y-6 text-lg text-gray-700 leading-relaxed"
             >
-              <h2 className="text-4xl mb-6">Our Story</h2>
+              {/* Small Red Heading */}
+              <h3 className="text-red-600 text-xl font-semibold uppercase">About Khao Halal Chinese</h3>
+
+              {/* Big Main Heading */}
+              <h2 className="text-5xl font-bold mb-6">Crafting Authentic Halal Chinese Flavours</h2>
+
               <p>
                 At KHAO Halal Chinese, we believe everyone should enjoy authentic-style Chinese food without compromise.
               </p>
