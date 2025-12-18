@@ -72,7 +72,7 @@ export function ImageSlider({ interval = 3500 }) {
           {visibleImages.map((img, index) => (
             <motion.div
               key={index}
-              className="flex-shrink-0 h-32 rounded-lg overflow-hidden shadow-md" // slightly taller
+              className="flex-shrink-0 h-36 rounded-lg overflow-hidden shadow-md" // increased height
               style={{ width: '23%' }} // width for 4 images
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
