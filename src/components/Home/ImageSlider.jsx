@@ -14,8 +14,8 @@ import pic9 from '../../public/assets/review_pictures/pic9.jpg';
 import pic10 from '../../public/assets/review_pictures/pic10.jpg';
 
 const images = [
-  pic1, pic2, pic3, pic4, pic5,
-  pic6, pic7, pic8, pic9, pic10
+  pic2, pic3, pic4, pic5,
+  pic6, pic7, pic8,
 ];
 
 export function ImageSlider({ interval = 3500 }) {
@@ -23,14 +23,12 @@ export function ImageSlider({ interval = 3500 }) {
   const visibleCount = 4; // show 4 images at once
 
   const nextSlide = () => {
-    setCurrentIndex((prev) => (prev + visibleCount) % images.length);
+    setCurrentIndex((prev) => (prev + 1) % images.length); // slide 1 at a time
   };
 
   const prevSlide = () => {
     setCurrentIndex((prev) =>
-      prev - visibleCount < 0
-        ? images.length - visibleCount
-        : prev - visibleCount
+      prev - 1 < 0 ? images.length - 1 : prev - 1
     );
   };
 
@@ -39,6 +37,7 @@ export function ImageSlider({ interval = 3500 }) {
     return () => clearInterval(timer);
   }, [interval]);
 
+  // Calculate visible images, wrapping around if needed
   const visibleImages =
     images.slice(currentIndex, currentIndex + visibleCount).length === visibleCount
       ? images.slice(currentIndex, currentIndex + visibleCount)
@@ -67,13 +66,13 @@ export function ImageSlider({ interval = 3500 }) {
           <ChevronRight size={24} />
         </button>
 
-        {/* Images */}
+        {/* Image Container */}
         <div className="flex gap-4 overflow-hidden w-full px-12">
           {visibleImages.map((img, index) => (
             <motion.div
               key={index}
-              className="flex-shrink-0 h-36 rounded-lg overflow-hidden shadow-md" // increased height
-              style={{ width: '23%' }} // width for 4 images
+              className="flex-shrink-0 rounded-lg overflow-hidden shadow-md relative"
+              style={{ width: '23%', height: '200px' }} // fixed height for all images
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.4 }}
@@ -81,7 +80,7 @@ export function ImageSlider({ interval = 3500 }) {
               <img
                 src={img}
                 alt={`Review ${index + 1}`}
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover object-center"
               />
             </motion.div>
           ))}
