@@ -15,12 +15,12 @@ import pic10 from '../../public/assets/review_pictures/pic10.jpg';
 
 const images = [
   pic1, pic2, pic3, pic4, pic5,
- pic7, pic9, pic10
+  pic6, pic7, pic8, pic9, pic10
 ];
 
 export function ImageSlider({ interval = 3500 }) {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const visibleCount = 2;
+  const visibleCount = 4; // show 4 images at once
 
   const nextSlide = () => {
     setCurrentIndex((prev) => (prev + visibleCount) % images.length);
@@ -48,14 +48,13 @@ export function ImageSlider({ interval = 3500 }) {
         ];
 
   return (
-    <div className="w-full bg-gray-100 py-10">
-      <div className="max-w-5xl mx-auto px-6 relative">
+    <div className="w-full bg-gray-100 py-6">
+      <div className="max-w-full mx-auto px-4 relative flex items-center">
 
         {/* Left Arrow */}
         <button
           onClick={prevSlide}
-          className="absolute left-0 top-1/2 -translate-y-1/2 z-10
-                     bg-white/90 hover:bg-white p-2 rounded-full shadow-lg"
+          className="absolute left-0 z-10 bg-white/90 hover:bg-white p-2 rounded-full shadow-lg"
         >
           <ChevronLeft size={24} />
         </button>
@@ -63,26 +62,18 @@ export function ImageSlider({ interval = 3500 }) {
         {/* Right Arrow */}
         <button
           onClick={nextSlide}
-          className="absolute right-0 top-1/2 -translate-y-1/2 z-10
-                     bg-white/90 hover:bg-white p-2 rounded-full shadow-lg"
+          className="absolute right-0 z-10 bg-white/90 hover:bg-white p-2 rounded-full shadow-lg"
         >
           <ChevronRight size={24} />
         </button>
 
         {/* Images */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 px-12">
+        <div className="flex gap-4 overflow-hidden w-full px-12">
           {visibleImages.map((img, index) => (
             <motion.div
               key={index}
-              className="
-                w-full
-                aspect-[4/3]
-                bg-white
-                rounded-xl
-                shadow-md
-                overflow-hidden
-                flex items-center justify-center
-              "
+              className="flex-shrink-0 h-32 rounded-lg overflow-hidden shadow-md" // slightly taller
+              style={{ width: '23%' }} // width for 4 images
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.4 }}
@@ -90,7 +81,7 @@ export function ImageSlider({ interval = 3500 }) {
               <img
                 src={img}
                 alt={`Review ${index + 1}`}
-                className="w-full h-full object-contain"
+                className="w-full h-full object-cover"
               />
             </motion.div>
           ))}

@@ -7,8 +7,7 @@ export function ReservationForm() {
     name: '', email: '', phone: '', date: '', time: '', guests: '2', message: ''
   });
 
-  const whatsappNumber = '17324743378'; // Replace with your WhatsApp number
-
+  const whatsappNumber = '5164838888'; 
   const handleSubmit = e => {
     e.preventDefault();
 
