@@ -60,7 +60,7 @@ export function Footer() {
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="w-5 h-5 text-red-400 flex-shrink-0" />
-                <span className="text-gray-300">5164838888</span>
+                <span className="text-gray-300">(516) 483-8888</span>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-red-400 flex-shrink-0" />
@@ -82,11 +82,9 @@ export function Footer() {
               <div className="text-gray-300 space-y-2">
                 <p>Wednesday-Monday</p>
                 <p className="text-sm">11:00 AM - 10:00 PM</p>
-                <p className="mt-3">Call for Catering Services</p>
+                {/* <p className="mt-3">Call for Catering Services</p> */}
                 <p className="text-sm">Walk-ins Welcome</p>
-                <p className="text-xs text-gray-400 mt-3">
-                  Last orders 30 min before closing
-                </p>
+               
               </div>
             </div>
           </motion.div>
@@ -111,9 +109,9 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <a href="#catering" className="text-gray-300 hover:text-red-400 transition-colors">
+                {/* <a href="#catering" className="text-gray-300 hover:text-red-400 transition-colors">
                   Catering Services
-                </a>
+                </a> */}
               </li>
               <li>
                 <a href="/about" className="text-gray-300 hover:text-red-400 transition-colors">

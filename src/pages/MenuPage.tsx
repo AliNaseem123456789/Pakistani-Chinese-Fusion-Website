@@ -92,7 +92,6 @@ return (
     );
   })}
 </div>
-
             {/* DESKTOP BUBBLES */}
             <div className="hidden md:flex overflow-x-auto gap-4">
               {categories.map((category) => (
