@@ -8,7 +8,7 @@ export function AboutUs() {
     threshold: 0.1,
   });
   return (
-    <div className="min-h-screen bg-white">
+    <div className="bg-white">
       {/* Story Section with Video */}
       <section ref={ref} className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
