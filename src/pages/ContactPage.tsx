@@ -1,0 +1,41 @@
+import { motion, useScroll, useTransform } from 'motion/react';
+import { HeroSection } from '../components/Contact/HeroSection';
+import { ReservationForm } from '../components/Contact/ReservationForm';
+import { MapSection } from '../components/Contact/MapSection';
+import { Footer } from '../components/Footer';
+import { ContactInfo } from '../components/Contact/ContactInfo';
+export function ContactPage() {
+  const { scrollY } = useScroll();
+  const backgroundY = useTransform(scrollY, [0, 2000], [0, 400]);
+  const backgroundOpacity = useTransform(scrollY, [0, 800], [0.6, 0.3]);
+
+  return (
+    <div className="relative min-h-screen">
+      {/* Parallax Background */}
+      <motion.div
+        style={{ y: backgroundY, opacity: backgroundOpacity }}
+        className="fixed inset-0 z-0"
+      >
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/60 z-10"></div>
+        <img
+          src="https://images.unsplash.com/photo-1606913209102-a51910ba83cf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjaGluZXNlJTIwbGFudGVybnMlMjBjdWx0dXJlfGVufDF8fHx8MTc2NTg5ODQxOHww&ixlib=rb-4.1.0&q=80&w=1080"
+          alt="Background"
+          className="w-full h-full object-cover"
+        />
+      </motion.div>
+
+      {/* Page Content */}
+      <div className="relative z-10">
+        <HeroSection />
+        <div className="bg-white py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <ContactInfo />
+            <ReservationForm />
+          </div>
+        </div>
+        <MapSection />
+        <Footer />
+      </div>
+    </div>
+  );
+}

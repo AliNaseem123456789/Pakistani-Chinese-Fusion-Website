@@ -1,0 +1,155 @@
+import { useState } from 'react';
+import { motion, useScroll, useTransform } from 'motion/react';
+import { MapPin, Phone, Mail, Clock, Send } from 'lucide-react';
+import { Footer } from '../components/Footer';
+
+export function ContactPage() {
+  const { scrollY } = useScroll();
+  const backgroundY = useTransform(scrollY, [0, 2000], [0, 400]);
+  const backgroundOpacity = useTransform(scrollY, [0, 800], [0.6, 0.3]);
+
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    date: '',
+    time: '',
+    guests: '2',
+    message: ''
+  });
+
+  const whatsappNumber = '17324743378'; // <-- Replace with your WhatsApp number (international format)
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+
+    // Construct WhatsApp message
+    const message = `Reservation Request:
+Name: ${formData.name}
+Email: ${formData.email}
+Phone: ${formData.phone}
+Date: ${formData.date}
+Time: ${formData.time}
+Number of Guests: ${formData.guests}
+Special Requests: ${formData.message || 'None'}`;
+
+    const encodedMessage = encodeURIComponent(message);
+    const url = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+
+    // Open WhatsApp
+    window.open(url, '_blank');
+
+    // Reset form
+    setFormData({
+      name: '',
+      email: '',
+      phone: '',
+      date: '',
+      time: '',
+      guests: '2',
+      message: ''
+    });
+  };
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
+
+  return (
+    <div className="relative min-h-screen">
+      {/* Parallax Background */}
+      <motion.div
+        style={{
+          y: backgroundY,
+          opacity: backgroundOpacity,
+        }}
+        className="fixed inset-0 z-0"
+      >
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/60 z-10"></div>
+        <img
+          src="https://images.unsplash.com/photo-1606913209102-a51910ba83cf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjaGluZXNlJTIwbGFudGVybnMlMjBjdWx0dXJlfGVufDF8fHx8MTc2NTg5ODQxOHww&ixlib=rb-4.1.0&q=80&w=1080"
+          alt="Background"
+          className="w-full h-full object-cover"
+        />
+      </motion.div>
+
+      {/* Content */}
+      <div className="relative z-10">
+        {/* Hero Section */}
+        <section className="pt-32 pb-20 text-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <motion.h1
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-6xl md:text-7xl mb-6"
+            >
+              Contact Us
+            </motion.h1>
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="text-xl md:text-2xl text-amber-300 max-w-3xl mx-auto"
+            >
+              We'd Love to Hear From You
+            </motion.p>
+          </div>
+        </section>
+
+        {/* Contact Content */}
+        <div className="bg-white">
+          <section className="py-20">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                {/* Contact Information */}
+                <motion.div
+                  initial={{ opacity: 0, x: -50 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.8 }}
+                >
+                  <h2 className="text-4xl mb-8">Get In Touch</h2>
+                  {/* ...Your contact info cards here (MapPin, Phone, Mail, Clock) ... */}
+                </motion.div>
+
+                {/* Reservation Form */}
+                <motion.div
+                  initial={{ opacity: 0, x: 50 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.8, delay: 0.2 }}
+                >
+                  <h2 className="text-4xl mb-8">Make a Reservation</h2>
+                  <form onSubmit={handleSubmit} className="bg-gray-50 p-8 rounded-lg shadow-lg">
+                    <div className="space-y-5">
+                      <input type="text" name="name" placeholder="Full Name *" value={formData.name} onChange={handleChange} className="w-full p-3 border rounded" required />
+                      <input type="email" name="email" placeholder="Email Address *" value={formData.email} onChange={handleChange} className="w-full p-3 border rounded" required />
+                      <input type="tel" name="phone" placeholder="Phone Number *" value={formData.phone} onChange={handleChange} className="w-full p-3 border rounded" required />
+                      <div className="grid grid-cols-2 gap-4">
+                        <input type="date" name="date" value={formData.date} onChange={handleChange} className="w-full p-3 border rounded" required />
+                        <input type="time" name="time" value={formData.time} onChange={handleChange} className="w-full p-3 border rounded" required />
+                      </div>
+                      <select name="guests" value={formData.guests} onChange={handleChange} className="w-full p-3 border rounded" required>
+                        {[1,2,3,4,5,6,7,8,9,10].map(n => <option key={n} value={n}>{n} {n===1?'Guest':'Guests'}</option>)}
+                        <option value="10+">10+ Guests</option>
+                      </select>
+                      <textarea name="message" value={formData.message} onChange={handleChange} rows={4} placeholder="Special Requests (Optional)" className="w-full p-3 border rounded resize-none"></textarea>
+                      
+                      <motion.button type="submit" whileHover={{scale:1.02}} whileTap={{scale:0.98}} className="w-full bg-red-600 text-white py-4 rounded-lg flex items-center justify-center gap-2">
+                        <Send size={20}/> Reserve via WhatsApp
+                      </motion.button>
+                    </div>
+                  </form>
+                </motion.div>
+              </div>
+            </div>
+          </section>
+
+          <Footer />
+        </div>
+      </div>
+    </div>
+  );
+}
