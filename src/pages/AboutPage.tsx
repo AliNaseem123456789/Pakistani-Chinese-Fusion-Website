@@ -94,14 +94,17 @@ export function AboutPage() {
                   transition={{ duration: 0.8 }}
                   className="relative h-[600px] rounded-2xl overflow-hidden shadow-2xl"
                 >
-         <video
+         {/* <video
   src={vid1}
   autoPlay
   loop
   muted
   playsInline
   className="w-full h-full object-cover"
-/>
+/> */}
+ <img src={pic}
+          alt="Background"
+          className="w-full h-full object-cover"/>
 
 
                 </motion.div>
