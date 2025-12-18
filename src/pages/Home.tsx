@@ -43,7 +43,7 @@ export function Home() {
         <div className="relative z-10 bg-white">
           <WhyChoose />
           <FeaturedDishes />
-          <AboutUs />
+          <AboutUs /> 
           <Testimonials />
           <ImageSlider/>
           <Footer />

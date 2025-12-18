@@ -7,11 +7,10 @@ export function AboutUs() {
     triggerOnce: true,
     threshold: 0.1,
   });
-
   return (
     <div className="min-h-screen bg-white">
       {/* Story Section with Video */}
-      <section ref={ref} className="py-20">
+      <section ref={ref} className="py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             
@@ -31,7 +30,6 @@ export function AboutUs() {
                 className="w-full h-full object-cover rounded-2xl"
               />
             </motion.div>
-
             {/* Right - Text */}
             <motion.div
               initial={{ opacity: 0, x: 50 }}
@@ -41,10 +39,8 @@ export function AboutUs() {
             >
               {/* Small Red Heading */}
               <h3 className="text-red-600 text-xl font-semibold uppercase">About Khao Halal Chinese</h3>
-
               {/* Big Main Heading */}
               <h2 className="text-5xl font-bold mb-6">Crafting Authentic Halal Chinese Flavours</h2>
-
               <p>
                 At KHAO Halal Chinese, we believe everyone should enjoy authentic-style Chinese food without compromise.
               </p>
@@ -53,7 +49,6 @@ export function AboutUs() {
                 and cooked in a clean, respectful environment.
               </p>
             </motion.div>
-
           </div>
         </div>
       </section>
