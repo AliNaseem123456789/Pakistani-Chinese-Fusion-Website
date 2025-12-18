@@ -2,10 +2,11 @@ import { motion } from 'motion/react';
 import { menuItems } from '../components/MenuData';
 
 export function MobileMenu() {
+  // Combine all menu items into one array
   const allItems = Object.values(menuItems).flat();
 
   return (
-    <div className="md:hidden grid grid-cols-1 gap-6">
+    <div className="md:hidden grid grid-cols-1 gap-6 px-4 py-6">
       {allItems.map((item, index) => (
         <motion.div
           key={index}
@@ -16,7 +17,11 @@ export function MobileMenu() {
         >
           <div className="flex gap-4">
             {item.image && (
-              <img src={item.image} alt={item.name} className="w-24 h-24 rounded-lg object-cover" />
+              <img
+                src={item.image}
+                alt={item.name}
+                className="w-24 h-24 rounded-lg object-cover"
+              />
             )}
             <div className="flex-1">
               <div className="flex justify-between mb-2">

@@ -50,6 +50,48 @@ return (
                 <Menu size={28} />
               </button>
             </div> */}
+  {/* MOBILE CATEGORIES - DISPLAY ALL IN ORDER */}
+<div className="md:hidden px-4 py-6">
+  {['soup', 'appetizers', 'chicken', 'beef', 'seafood', 'noodles', 'vegetable', 'rice', 'drinks'].map((catId) => {
+    const category = categories.find((c) => c.id === catId);
+    if (!category) return null;
+    return (
+      <div key={category.id} className="mb-8">
+        <h2 className="text-xl font-semibold mb-4">{category.name}</h2>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="grid grid-cols-1 gap-6"
+        >
+          {menuItems[category.id]?.map((item, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: index * 0.05 }}
+              className="bg-white p-4 rounded-lg shadow-md hover:shadow-xl flex gap-4"
+            >
+              {item.image && (
+                <img
+                  src={item.image}
+                  alt={item.name}
+                  className="w-20 h-20 rounded-lg object-cover"
+                />
+              )}
+              <div className="flex-1">
+                <div className="flex justify-between mb-1">
+                  <h3 className="text-lg font-medium">{item.name}</h3>
+                  <span className="text-red-600">{item.price}</span>
+                </div>
+                <p className="text-gray-600 text-sm">{item.desc}</p>
+              </div>
+            </motion.div>
+          ))}
+        </motion.div>
+      </div>
+    );
+  })}
+</div>
 
             {/* DESKTOP BUBBLES */}
             <div className="hidden md:flex overflow-x-auto gap-4">
