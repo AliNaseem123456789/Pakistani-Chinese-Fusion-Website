@@ -32,13 +32,13 @@ export function Footer() {
               >
                 <Facebook size={24} />
               </motion.a>
-              <motion.a
+              {/* <motion.a
                 href="https://www.facebook.com/people/Khao-Halal-Chinese/61575022847569/"
                 whileHover={{ scale: 1.2, rotate: 5 }}
                 className="text-gray-300 hover:text-red-400 transition-colors"
               >
                 <Twitter size={24} />
-              </motion.a>
+              </motion.a> */}
             </div>
           </motion.div>
 
