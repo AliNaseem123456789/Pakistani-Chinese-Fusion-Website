@@ -1,7 +1,6 @@
 import { useInView } from 'react-intersection-observer';
 import { motion } from 'motion/react';
 import vid1 from "../../public/assets/banners/aboutus.mp4";
-
 export function AboutUs() {
   const [ref, inView] = useInView({
     triggerOnce: true,
