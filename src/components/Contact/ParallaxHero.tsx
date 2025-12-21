@@ -1,4 +1,3 @@
-import aboutUsImage from "../../public/assets/banners/catering.jpg";
 import { FaPhoneAlt, FaMapMarkerAlt } from "react-icons/fa";
 import { MapSection } from "./MapSection";
 
@@ -15,7 +14,7 @@ export default function ParallaxHero() {
          <div className="w-full">
               <div className="relative w-full h-[300px] md:h-[350px] lg:h-[400px] rounded-2xl overflow-hidden shadow-2xl">
                 <img 
-                  src={aboutUsImage} 
+                  src="/assets/banners/catering.jpg"
                   alt="About Us" 
                   className="w-full h-full object-cover"
                 />
@@ -51,15 +50,8 @@ export default function ParallaxHero() {
                     </p>
                   </div>
                 </div>
-
-             
 {/* Location Card */}
-<a
-  href={googleMapsUrl}
-  target="_blank"
-  rel="noopener noreferrer"
-  className="block"
->
+<a href={googleMapsUrl} target="_blank" rel="noopener noreferrer" className="block">
   <div className="flex items-center gap-5 bg-white px-6 py-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300">
     <div className="flex items-center justify-center w-16 h-16 bg-red-600 rounded-full flex-shrink-0">
       <FaMapMarkerAlt className="text-white text-xl" />

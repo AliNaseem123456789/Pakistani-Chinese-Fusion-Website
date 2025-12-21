@@ -1,25 +1,23 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { motion } from 'motion/react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
-
-import pic1 from '../../public/assets/review_pictures/pic1.jpg';
-import pic2 from '../../public/assets/review_pictures/pic2.jpg';
-import pic3 from '../../public/assets/review_pictures/pic3.jpg';
-import pic4 from '../../public/assets/review_pictures/pic4.jpg';
-import pic5 from '../../public/assets/review_pictures/pic5.jpg';
-import pic6 from '../../public/assets/review_pictures/pic6.jpg';
-import pic7 from '../../public/assets/review_pictures/pic7.jpg';
-import pic8 from '../../public/assets/review_pictures/pic8.jpg';
-import pic9 from '../../public/assets/review_pictures/pic9.jpg';
-import pic10 from '../../public/assets/review_pictures/pic10.jpg';
-import pic11 from '../../public/assets/review_pictures/pic11.jpg';
-import pic12 from '../../public/assets/review_pictures/pic12.jpg';
-import pic13 from '../../public/assets/review_pictures/pic13.jpg';
-import pic14 from '../../public/assets/review_pictures/pic14.jpg';
-
 const images = [
-  pic1, pic2, pic3, pic4, pic5, pic6, pic7, pic8, pic13, pic14, pic12, pic11
+  "/assets/review_pictures/pic1.jpg",
+  "/assets/review_pictures/pic2.jpg",
+  "/assets/review_pictures/pic3.jpg",
+  "/assets/review_pictures/pic4.jpg",
+  "/assets/review_pictures/pic5.jpg",
+  "/assets/review_pictures/pic6.jpg",
+  "/assets/review_pictures/pic7.jpg",
+  "/assets/review_pictures/pic8.jpg",
+  "/assets/review_pictures/pic9.jpg",
+  "/assets/review_pictures/pic10.jpg",
+  "/assets/review_pictures/pic11.jpg",
+  "/assets/review_pictures/pic12.jpg",
+  "/assets/review_pictures/pic13.jpg",
+  "/assets/review_pictures/pic14.jpg",
 ];
+
 
 export function ImageSlider({ interval = 4000 }) {
   const [currentIndex, setCurrentIndex] = useState(0);

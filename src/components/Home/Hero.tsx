@@ -14,11 +14,11 @@ export function Hero() {
       {/* Static Hero Background */}
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-black/50 z-10"></div>
-        <img
-          src="https://images.unsplash.com/photo-1675691607355-24a2ac1e9ee1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjaGluZXNlJTIwdGVtcGxlJTIwYXJjaGl0ZWN0dXJlfGVufDF8fHx8MTc2NTg1MDI2OXww&ixlib=rb-4.1.0&q=80&w=1080"
-          alt="Hero Background"
+        {/* <img
+          // src="/assets/banners/mainbanner.jpg"
+        alt="Hero Background"
           className="w-full h-full object-cover"
-        />
+        /> */}
       </div>
 
       <div className="relative z-20 text-center px-4 max-w-5xl mx-auto">
@@ -72,9 +72,7 @@ href="tel:+15164838888"
 >
   Call Us Now
 </a>
-
         </motion.div>
-
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}

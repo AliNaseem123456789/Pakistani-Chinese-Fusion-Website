@@ -2,11 +2,6 @@ import { useState } from 'react';
 import { motion } from 'motion/react';
 import { useInView } from 'react-intersection-observer';
 import { Star, Quote, ChevronLeft, ChevronRight } from 'lucide-react';
-import ToobaHashmi from "../../public/assets/reviews/ToobaHashmi.png";
-import shahedIslam from "../../public/assets/reviews/shahedIslam.png";
-import harisalvi from "../../public/assets/reviews/harisalvi.png";
-import ahad from "../../public/assets/reviews/ahad.png";
-import AishaBadshah from "../../public/assets/reviews/AishaBadshah.png";
 
 export function Testimonials() {
   const [ref, inView] = useInView({
@@ -24,14 +19,14 @@ export function Testimonials() {
       location: 'New York, NY',
       rating: 5,
       text: "We had a fantastic dining experience at Khao Halal Chinese! Everything we ordered was absolutely delicious. The Fish Chilli was bursting with flavor, perfectly cooked and just the right amount of spice. The Hakka Noodles and the American Chicken Chopsuey was a standout – savory, crispy, flavorful, and cooked to perfection. To top it all off, the Mango Lassi was incredibly refreshing and creamy – one of the best we've had! The staff were genuinely friendly and attentive, making us feel welcome from the moment we walked in. Highly recommend this place if you’re looking for a flavorful meal and friendly service. We'll definitely be coming back soon!",
-      image: ToobaHashmi
+      image: "/assets/reviews/ToobaHashmi.png"
     },
     {
       name: 'Shahed Islam',
       location: 'Garden City, NY',
       rating: 5,
       text: "Just tried out Khao Chinese in Garden City. They opened a few weeks ago near our place. It's not fancy or fine dining — more like a chill spot to hang out and eat good food. Staff was super friendly and welcoming. We ordered Chicken wings, Masala fries, Hakka chicken, Crispy beef chili, Chicken fried rice, Tom yum soup. Everything was tasty. Honestly, it's way better than most other halal Chinese places we've been to. Definitely gonna go back. Support your local spots!",
-      image: shahedIslam
+      image: "/assets/reviews/shahedIslam.png"
     },
     {
       name: 'Zoya Shahid',
@@ -45,21 +40,21 @@ export function Testimonials() {
       location: 'New York, NY',
       rating: 5,
       text: "Khao Halal Chicken blew me away! From the moment I walked in, the aroma of freshly grilled spices set the tone for an amazing meal. I ordered the chicken chilli and was genuinely impressed — the chicken was perfectly seasoned, tender, and juicy. The rice was fragrant and fluffy, and the white and red sauces were the perfect combo of creamy and spicy. Portion sizes were generous and everything tasted fresh and authentic. Staff was friendly and made great recommendations. Must-try!",
-      image: harisalvi
+      image: "/assets/reviews/harisalvi.png"
     },
     {
       name: 'Ahad',
       location: 'Long Island, NY',
       rating: 5,
       text: "Our stop en route from Boston to eastern Long Island was totally worth it. Delicious food, excellent service, piping hot and ready upon arrival. Ahmed is your guy! Tried the Hakka Shrimp, Sesame Chicken, Mixed Special Fried Rice, and Crispy Beef Chilli. Loved the Asian Fusion flavors, especially that rice was basmati instead of sticky! Finger licking good.",
-      image: ahad
+      image:"/assets/reviews/ahad.png"
     },
     {
       name: 'Aisha Badsha',
       location: 'Garden City, NY',
       rating: 5,
       text: "Khao Chinese is honestly so good! The food always tastes fresh and full of flavor—everything I've tried has been amazing. The portions are great, the staff is super nice, and the service is fast. The place has a chill, cozy vibe that makes it perfect for grabbing dinner with friends or just a quick takeout night. Definitely one of my favorite spots for Chinese food!",
-      image: AishaBadshah
+      image: "/assets/reviews/AishaBadshah.png"
     },
     // {
     //   name: 'John Smith',

@@ -2,8 +2,6 @@ import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion } from 'motion/react';
 import { Menu, X } from 'lucide-react';
-import mainlogo from "../public/assets/banners/mainlogo1.png"
-// import mainlogo from "../public/assets/banners/mainlogo.jpg"
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -44,15 +42,12 @@ export function Navbar() {
             >
               {/* KHAO */}
                <img
-          src={mainlogo} 
+          src="assets/banners/mainlogo1.png"
           alt="Restaurant Logo"
       className="h-12 w-auto" 
        />
-              
             </motion.h1>
-            {/* <p className="text-xs text-amber-300 tracking-wide">Halal Chinese Fusion</p> */}
           </Link>
-
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-8">
             {navLinks.map((link) => (
@@ -78,7 +73,6 @@ export function Navbar() {
               Reserve Table
             </motion.a>
           </div>
-
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
@@ -88,7 +82,6 @@ export function Navbar() {
             {isOpen ? <X size={28} /> : <Menu size={28} />}
           </button>
         </div>
-
         {/* Mobile Menu */}
         {isOpen && (
           <motion.div

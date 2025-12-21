@@ -1,6 +1,5 @@
 import { useInView } from 'react-intersection-observer';
 import { motion } from 'motion/react';
-import vid1 from "../../public/assets/banners/aboutus.mp4";
 export function AboutUs() {
   const [ref, inView] = useInView({
     triggerOnce: true,
@@ -20,14 +19,12 @@ export function AboutUs() {
               transition={{ duration: 0.8 }}
               className="relative h-[600px] rounded-2xl overflow-hidden shadow-2xl"
             >
-              <video
-                src={vid1}
+              <video src="/assets/banners/aboutus.mp4"
                 autoPlay
                 loop
                 muted
                 playsInline
-                className="w-full h-full object-cover rounded-2xl"
-              />
+                className="w-full h-full object-cover rounded-2xl"/>
             </motion.div>
             {/* Right - Text */}
             <motion.div

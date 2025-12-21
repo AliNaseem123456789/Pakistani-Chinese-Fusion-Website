@@ -1,16 +1,11 @@
 import { useState } from 'react';
 import { motion, useScroll, useTransform } from 'motion/react';
-// import { Menu, X } from 'lucide-react';
-import { menuItems, categories} from "../components/MenuData";
-  import mainbanner from "../public/assets/banners/mainbanner.jpeg";
+import { menuItems, categories} from "../components/MenuData"
 import { Footer } from '../components/Footer';
-// import { MenuImages } from '../assets/MenuImages';
-// import { MenuImages } from '../components/MenuImages';
 export function MenuPage() {
   const { scrollY } = useScroll();
   const backgroundY = useTransform(scrollY, [0, 2000], [0, 400]);
   const backgroundOpacity = useTransform(scrollY, [0, 800], [0.6, 0.3]);
-
   const [activeCategory, setActiveCategory] = useState('soup');
   const [sidebarOpen, setSidebarOpen] = useState(false);
 return (
@@ -23,7 +18,7 @@ return (
       <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/60 z-10" />
    
             <img
-              src={mainbanner}
+              src="/assets/banners/mainbanner.jpeg"
               alt="Background"
               className="w-full h-full object-cover"
             />
@@ -44,14 +39,6 @@ return (
         {/* Categories */}
         <div className="sticky top-20 bg-white shadow-md z-40">
           <div className="max-w-7xl mx-auto px-4 py-6">
-
-            {/* MOBILE HEADER
-            <div className="flex md:hidden justify-between items-center">
-              <span className="font-semibold text-lg">Categories</span>
-              <button onClick={() => setSidebarOpen(true)}>
-                <Menu size={28} />
-              </button>
-            </div> */}
   {/* MOBILE CATEGORIES - DISPLAY ALL IN ORDER */}
 <div className="md:hidden px-4 py-6">
   {['soup', 'appetizers', 'chicken', 'beef', 'seafood', 'noodles', 'vegetable', 'rice', 'drinks'].map((catId) => {
@@ -114,9 +101,6 @@ return (
             </div>
           </div>
         </div>
-
-       
-
         {/* Menu Items */}
         <section className="py-16">
           <div className="max-w-7xl mx-auto px-4">

@@ -31,7 +31,6 @@ export const menuItems = {
       { name: 'Hunan Beef', desc: 'Spicy Hunan-style beef', price: '$14.99', image: MenuImages.Hunan_Beef },
       { name: 'Black Pepper Beef', desc: 'Peppery black pepper beef', price: '$14.99', image: MenuImages.Black_Pepper_Beef },
     ],
-
     seafood: [
       { name: 'Shrimp Broccoli', desc: 'Shrimp sautéed with broccoli', price: '$14.99', image: MenuImages.Shrimp_Broccoli },
       { name: 'Sesame Shrimp', desc: 'Crispy shrimp in sesame glaze', price: '$14.99', image: MenuImages.Sesame_Shrimp },

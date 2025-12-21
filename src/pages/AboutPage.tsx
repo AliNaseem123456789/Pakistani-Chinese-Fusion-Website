@@ -1,23 +1,17 @@
-import { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'motion/react';
 import { useInView } from 'react-intersection-observer';
-import { ImageWithFallback } from '../components/figma/ImageWithFallback';
 import { Award, ChefHat, Heart, Users } from 'lucide-react';
 import { Footer } from '../components/Footer';
-import pic from "../public/assets/banners/aboutuspic.jpg";
-import vid1 from "../public/assets/banners/aboutus.mp4";
- import mainbanner from "../public/assets/banners/mainbanner.jpeg";
 export function AboutPage() {
   const { scrollY } = useScroll();
   const backgroundY = useTransform(scrollY, [0, 2000], [0, 400]);
   const backgroundOpacity = useTransform(scrollY, [0, 800], [0.6, 0.3]);
-
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1,
   });
 
-  const values = [
+  const values = [ 
     {
       icon: <ChefHat className="w-16 h-16 text-red-600" />,
       title: '5-Star Excellence',
@@ -50,12 +44,10 @@ export function AboutPage() {
         className="fixed inset-0 z-0"
       >
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/60 z-10"></div>
-    
             <img
-              src={mainbanner}
+              src="/assets/banners/mainbanner.jpeg"
               alt="Background"
-              className="w-full h-full object-cover"
-            />
+              className="w-full h-full object-cover"/>
       </motion.div>
       {/* Content */}
       <div className="relative z-10">
@@ -92,15 +84,7 @@ export function AboutPage() {
                   transition={{ duration: 0.8 }}
                   className="relative h-[600px] rounded-2xl overflow-hidden shadow-2xl"
                 >
-         {/* <video
-  src={vid1}
-  autoPlay
-  loop
-  muted
-  playsInline
-  className="w-full h-full object-cover"
-/> */}
- <img src={pic}
+ <img src="/assets/banners/aboutuspic.jpg"
           alt="Background"
           className="w-full h-full object-cover"/>
                 </motion.div>
