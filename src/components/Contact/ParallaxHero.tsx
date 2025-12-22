@@ -34,30 +34,33 @@ export default function ParallaxHero() {
               <div className="space-y-6">
                 
                 {/* Phone Card */}
-                <div className="flex items-center gap-5 bg-white px-6 py-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300">
-<a href="tel:+15164838888"><div className="flex items-center gap-2 justify-center w-16 h-16 bg-red-600 rounded-full flex-shrink-0">
-                   <FaPhoneAlt className="text-white text-xl" />
-                  </div>
-                  </a>
-                  <div>
-               <a href="tel:+15164838888">     
-                    <p className=" text-sm text-red-600 font-semibold mb-1">
-                      Call Us Now
-                    </p>
-                    </a>
-                    <p className="font-bold text-gray-900 text-xl">
-                      (516) 438 8888
-                    </p>
-                  </div>
-                </div>
+      {/* Phone Card */}
+<div className="flex items-center gap-8 bg-white px-6 py-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300">
+  <a href="tel:+15164838888">
+    <div className="flex items-center justify-center w-16 h-16 bg-red-600 rounded-full flex-shrink-0">
+      <FaPhoneAlt className="text-white text-xl" />
+    </div>
+  </a>
+  <div>
+    <a href="tel:+15164838888">
+      <p className="text-sm text-red-600 font-semibold mb-1">
+        Call Us Now
+      </p>
+    </a>
+    <p className="font-bold text-gray-900 text-xl">
+      (516) 438 8888
+    </p>
+  </div>
+</div>
+
 {/* Location Card */}
 <a href={googleMapsUrl} target="_blank" rel="noopener noreferrer" className="block">
-  <div className="flex items-center gap-5 bg-white px-6 py-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300">
+  <div className="flex items-center gap-8 bg-white px-6 py-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300">
     <div className="flex items-center justify-center w-16 h-16 bg-red-600 rounded-full flex-shrink-0">
       <FaMapMarkerAlt className="text-white text-xl" />
     </div>
     <div>
-      <p className="text-sm text-red-600 font-semibold mb-4">
+      <p className="text-sm text-red-600 font-semibold mb-1">
         Our Location
       </p>
       <p className="font-bold text-gray-900 text-lg leading-relaxed">
