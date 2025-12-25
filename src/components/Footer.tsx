@@ -78,13 +78,12 @@ export function Footer() {
           >
             <h4 className="text-xl mb-6">Opening Hours</h4>
             <div className="flex items-start gap-3">
-              {/* <Clock className="w-5 h-5 text-red-400 flex-shrink-0 mt-1" /> */}
               <div className="text-gray-300 space-y-2">
-                <p> Saturday 12:00 PM to 10:30 PM</p>
-                <p> Sunday 12:00 PM to 09:30 PM</p>
-                <p> Monday to Friday 12:00 to 10:00 PM</p>
+                <p  className="text-gray-300"> Saturday 12:00 PM to 10:30 PM</p>
+                <p  className="text-gray-300"> Sunday 12:00 PM to 09:30 PM</p>
+                <p  className="text-gray-300"> Monday to Friday 12:00 to 10:00 PM</p>
                
-                <p className="text-sb mt-3">Walk-ins Welcome</p>
+                <p  className="text-gray-300">Walk-ins Welcome</p>
               </div>
             </div>
           </motion.div>

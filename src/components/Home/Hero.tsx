@@ -62,8 +62,7 @@ export function Hero() {
         >
           <a
             href="/menu"
-            className="bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-lg transition-all transform hover:scale-105"
-          >
+            className="bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-lg transition-all transform hover:scale-105">
             View Menu
           </a>
         <a
@@ -77,7 +76,7 @@ href="tel:+15164838888"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 1.2, repeat: Infinity, repeatType: "reverse" }}
-          className="absolute bottom-10 left-1/2 transform -translate-x-1/2 cursor-pointer"
+          className="absolute bottom-16 mt-12 left-1/2 transform -translate-x-1/2 cursor-pointer"
           onClick={scrollToContent}
         >
           <ChevronDown size={40} className="text-amber-300 animate-bounce" />
