@@ -42,9 +42,9 @@ export function Navbar() {
             >
               {/* KHAO */}
                <img
-          src="assets/banners/mainlogo3.jpg"
+          src="assets/banners/khao.png"
           alt="Restaurant Logo"
-      className="h-12 w-auto" 
+      className="h-24 w-auto" 
        />
             </motion.h1>
           </Link>
