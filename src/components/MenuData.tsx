@@ -32,7 +32,68 @@ export const menuItems = {
       image: MenuImages.Tom_Yum_Soup,
     },
   ],
-
+  chicken: [
+    {
+      name: "Chicken Broccoli",
+      desc: "Tender chicken tossed with fresh broccoli in savory sauce",
+      price: "$13.99",
+      image: MenuImages.Chicken_Broccoli,
+    },
+    {
+      name: "Sesame Chicken",
+      desc: "Crispy chicken glazed in sweet sesame sauce",
+      price: "$13.99",
+      image: MenuImages.Sesame_Chicken,
+    },
+    {
+      name: "Chicken Manchurian",
+      desc: "Juicy chicken in spicy Manchurian gravy",
+      price: "$13.99",
+      image: MenuImages.Chicken_Manchurian,
+    },
+    {
+      name: "Chicken w/ Garlic Sauce",
+      desc: "Stir-fried chicken in bold garlic sauce",
+      price: "$13.99",
+      image: MenuImages.Chicken_W_Garlic,
+    },
+    {
+      name: "Hakka Chicken",
+      desc: "Spicy Hakka-style chicken with peppers",
+      price: "$13.99",
+      image: MenuImages.Hakka_Chicken,
+    },
+    {
+      name: "Chicken Bamboo Shoot",
+      desc: "Chicken sautéed with bamboo shoots",
+      price: "$13.99",
+      image: MenuImages.Chicken_Bamboo_Shoot,
+    },
+    {
+      name: "Chicken Chilli",
+      desc: "Fiery chicken with chilies and onions",
+      price: "$13.99",
+      image: MenuImages.Chicken_Chilli,
+    },
+    {
+      name: "Chicken w/ Mushrooms",
+      desc: "Chicken cooked with mushrooms in brown sauce",
+      price: "$13.99",
+      image: MenuImages.Chicken_w_Mushrooms,
+    },
+    {
+      name: "Black Pepper Chicken",
+      desc: "Chicken stir-fried in black pepper sauce",
+      price: "$13.99",
+      image: MenuImages.Black_Pepper_Chicken,
+    },
+    {
+      name: "Hunan Chicken",
+      desc: "Spicy Hunan-style chicken with vegetables",
+      price: "$13.99",
+      image: MenuImages.Hunan_Chicken,
+    },
+  ],
   beef: [
     {
       name: "Beef Broccoli",
