@@ -1,7 +1,7 @@
-import { motion } from 'motion/react';
-import { useInView } from 'react-intersection-observer';
-import { ImageWithFallback } from '../figma/ImageWithFallback';
-import { MenuImages } from '../MenuImages';
+import { motion } from "motion/react";
+import { useInView } from "react-intersection-observer";
+import { ImageWithFallback } from "../figma/ImageWithFallback";
+import { MenuImages } from "../MenuImages";
 
 export function FeaturedDishes() {
   const [ref, inView] = useInView({
@@ -10,20 +10,50 @@ export function FeaturedDishes() {
   });
 
   const dishes = [
-    { name: 'Chicken Lo Mein', desc: 'Lo mein noodles with chicken', price: '$10.99 / $13.99', image:"/assets/featured/chicken_lo_mein.png" },
-    { name: 'Beef Lo Mein', desc: 'Lo mein noodles with beef', price: '$10.99 / $13.99', image: MenuImages.Beef_Lo_Mein },
-    { name: 'Sesame Chicken', desc: 'Crispy chicken glazed in sweet sesame sauce', price: '$13.99', image: MenuImages.Sesame_Chicken },
-    { name: 'Chicken Corn Soup', desc: 'Chicken, sweet corn, smooth broth', price: '$5.99 / $7.99', image: "/assets/featured/chicken_Corn.png" },
-    { name: 'Shrimp Broccoli', desc: 'Shrimp sautéed with broccoli', price: '$14.99', image: MenuImages.Shrimp_Broccoli },
-    { name: 'Veg Fried Rice', desc: 'Vegetable fried rice', price: '$8.99 / $9.99', image: MenuImages.Veg_Fried_Rice }
+    {
+      name: "Chicken Lo Mein",
+      desc: "Lo mein noodles with chicken",
+      price: "$10.99 / $13.99",
+      image: "/assets/featured/chicken_lo_mein.png",
+    },
+    {
+      name: "Beef Lo Mein",
+      desc: "Lo mein noodles with beef",
+      price: "$10.99 / $13.99",
+      image: MenuImages.Beef_Lo_Mein,
+    },
+    {
+      name: "Sesame Chicken",
+      desc: "Crispy chicken glazed in sweet sesame sauce",
+      price: "$13.99",
+      image: MenuImages.Sesame_Chicken,
+    },
+    {
+      name: "Chicken Corn Soup",
+      desc: "Chicken, sweet corn, smooth broth",
+      price: "$5.99 / $7.99",
+      image: "/assets/featured/chicken_Corn.png",
+    },
+    {
+      name: "Shrimp",
+      desc: "Juicy, tender shrimp cooked with bold spices and rich flavour in every bite.",
+      price: "$14.99",
+      image: MenuImages.Shrimp_fried,
+    },
+    {
+      name: "Veg Fried Rice",
+      desc: "Vegetable fried rice",
+      price: "$8.99 / $9.99",
+      image: MenuImages.Veg_Fried_Rice,
+    },
   ];
 
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
-      transition: { staggerChildren: 0.15 }
-    }
+      transition: { staggerChildren: 0.15 },
+    },
   };
 
   const itemVariants = {
@@ -31,8 +61,8 @@ export function FeaturedDishes() {
     visible: {
       opacity: 1,
       scale: 1,
-      transition: { duration: 0.5, ease: 'easeOut' }
-    }
+      transition: { duration: 0.5, ease: "easeOut" },
+    },
   };
 
   return (
@@ -46,7 +76,8 @@ export function FeaturedDishes() {
         >
           <h2 className="text-5xl md:text-6xl mb-4">Featured Fusion Dishes</h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Signature creations where Pakistani tradition meets Chinese innovation
+            Signature creations where Pakistani tradition meets Chinese
+            innovation
           </p>
         </motion.div>
         <motion.div
@@ -61,7 +92,8 @@ export function FeaturedDishes() {
               variants={itemVariants}
               whileHover={{ y: -10 }}
               className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300"
-            ><div className="relative h-64 overflow-hidden">
+            >
+              <div className="relative h-64 overflow-hidden">
                 <motion.div
                   whileHover={{ scale: 1.1 }}
                   transition={{ duration: 0.4 }}

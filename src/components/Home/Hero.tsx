@@ -1,11 +1,11 @@
-import { motion } from 'motion/react';
-import { ChevronDown } from 'lucide-react';
+import { motion } from "motion/react";
+import { ChevronDown } from "lucide-react";
 
 export function Hero() {
   const scrollToContent = () => {
     window.scrollTo({
       top: window.innerHeight,
-      behavior: 'smooth'
+      behavior: "smooth",
     });
   };
 
@@ -27,7 +27,7 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          <motion.h1 
+          <motion.h1
             className="text-7xl md:text-9xl mb-6 tracking-wider"
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -44,13 +44,15 @@ export function Hero() {
           className="space-y-4"
         >
           <p className="text-2xl md:text-3xl text-amber-300 tracking-wide">
-            Authentic Halal Chinese
+            Authentic Halal Indo-Chinese
           </p>
           <p className="text-xl md:text-2xl text-gray-200">
-          Chinese Fusion • New York
+            Indo-Chinese Fusion • New York
           </p>
           <p className="text-lg text-gray-300 max-w-2xl mx-auto mt-6">
-           Experience the artistry of our elite culinary team, bringing the excellence of 5-star hotel kitchens to authentic halal Chinese fusion.
+            Experience the artistry of our elite culinary team, bringing the
+            excellence of 5-star hotel kitchens to authentic halal Indo-Chinese
+            fusion.
           </p>
         </motion.div>
 
@@ -66,17 +68,22 @@ export function Hero() {
           >
             View Menu
           </a>
-        <a
-href="tel:+15164838888"
-  className="bg-transparent border-2 border-white hover:bg-white hover:text-gray-900 text-white px-8 py-4 rounded-lg transition-all transform hover:scale-105"
->
-  Call Us Now
-</a>
+          <a
+            href="tel:+15164838888"
+            className="bg-transparent border-2 border-white hover:bg-white hover:text-gray-900 text-white px-8 py-4 rounded-lg transition-all transform hover:scale-105"
+          >
+            Call Us Now
+          </a>
         </motion.div>
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 0.8, delay: 1.2, repeat: Infinity, repeatType: "reverse" }}
+          transition={{
+            duration: 0.8,
+            delay: 1.2,
+            repeat: Infinity,
+            repeatType: "reverse",
+          }}
           className="absolute bottom-16 mt-12 left-1/2 transform -translate-x-1/2 cursor-pointer"
           onClick={scrollToContent}
         >

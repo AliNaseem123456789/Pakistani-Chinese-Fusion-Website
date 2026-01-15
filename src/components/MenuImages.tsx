@@ -39,7 +39,7 @@ export const MenuImages = {
   Fish_Fry_Whole: "/assets/menuitems/img51_Fish_Fry_Whole.jpg",
 
   Chicken_Lo_Mein: "/assets/menuitems/img52_Chicken_Lo_Mein.jpg",
-  Beef_Lo_Mein: "/assets/menuitems/img53_Beef_Lo_Mein.jpg",
+  Beef_Lo_Mein: "/assets/menuitems/img199_Beef_Lo_Mein_150x150.jpg",
   Shrimp_Lo_Mein: "/assets/menuitems/img54_Shrimp_Lo_Mein.jpg",
   Tofu_Lo_Mein: "/assets/menuitems/img55_Tofu_Lo_Mein.jpg",
   Vegetable_Lo_Mein: "/assets/menuitems/img56_Vegetable_Lo_Mein.jpg",
@@ -57,7 +57,8 @@ export const MenuImages = {
   Can_Soda: "/assets/menuitems/img67_Bottled_JuiceSoda.jpg",
   Fruit_Smoothie: "/assets/menuitems/img68_Fruit_Smoothie.jpg",
 
-  Broccoli_w_Garlic_Sauce: "/assets/menuitems/img69_Broccoli_w_Garlic_Sauce.jpg",
+  Broccoli_w_Garlic_Sauce:
+    "/assets/menuitems/img69_Broccoli_w_Garlic_Sauce.jpg",
   Sesame_Tofu: "/assets/menuitems/img70_Sesame_Tofu.jpg",
   Vegetable_Tofu: "/assets/menuitems/img71_Vegetable_Tofu.jpg",
   Hakka_Vegetable: "/assets/menuitems/img72_Hakka_Vegetable.jpg",
@@ -67,7 +68,9 @@ export const MenuImages = {
   Chicken_Fried_Rice: "/assets/menuitems/img75_Chicken_Fried_Rice.jpg",
   Beef_Fried_Rice: "/assets/menuitems/img76_Beef_Fried_Rice.jpg",
   Shrimp_Fried_Rice: "/assets/menuitems/img77_Shrimp_Fried_Rice.jpg",
-  Veg_Fried_Rice: "/assets/menuitems/img78_Veg_Fried_Rice.jpg",
-  Mixed_Special_Fried_Rice: "/assets/menuitems/img79_Mixed_Special_Fried_Rice.jpg",
+  Veg_Fried_Rice: "/assets/menuitems/img268_veg_fried_rice_600x783.jpg",
+  Mixed_Special_Fried_Rice:
+    "/assets/menuitems/img79_Mixed_Special_Fried_Rice.jpg",
+  Shrimp_fried: "/assets/menuitems/img126_Shrimps_600x783.jpg",
   White_Rice_pint: "/assets/menuitems/White-Rice-pint.jpg",
 };

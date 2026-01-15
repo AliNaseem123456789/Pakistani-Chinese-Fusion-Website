@@ -1,7 +1,7 @@
-import { motion, useScroll, useTransform } from 'motion/react';
-import { useInView } from 'react-intersection-observer';
-import { Award, ChefHat, Heart, Users } from 'lucide-react';
-import { Footer } from '../components/Footer';
+import { motion, useScroll, useTransform } from "motion/react";
+import { useInView } from "react-intersection-observer";
+import { Award, ChefHat, Heart, Users } from "lucide-react";
+import { Footer } from "../components/Footer";
 export function AboutPage() {
   const { scrollY } = useScroll();
   const backgroundY = useTransform(scrollY, [0, 2000], [0, 400]);
@@ -11,27 +11,30 @@ export function AboutPage() {
     threshold: 0.1,
   });
 
-  const values = [ 
+  const values = [
     {
       icon: <ChefHat className="w-16 h-16 text-red-600" />,
-      title: '5-Star Excellence',
-      description: 'Our chefs bring years of experience from Pakistan\'s most prestigious hotels'
+      title: "5-Star Excellence",
+      description:
+        "Our chefs bring years of experience from Pakistan's most prestigious hotels",
     },
     {
       icon: <Heart className="w-16 h-16 text-pink-600" />,
-      title: 'Authentic Fusion',
-      description: 'True Pakistani-Chinese fusion that honors both culinary traditions'
+      title: "Authentic Fusion",
+      description:
+        "True Pakistani-Chinese fusion that honors both culinary traditions",
     },
     {
       icon: <Award className="w-16 h-16 text-amber-600" />,
-      title: '100% Halal',
-      description: 'Certified halal ingredients and preparation in every dish'
+      title: "100% Halal",
+      description: "Certified halal ingredients and preparation in every dish",
     },
     {
       icon: <Users className="w-16 h-16 text-blue-600" />,
-      title: 'Community First',
-      description: 'Serving New York\'s diverse community with warmth and respect'
-    }
+      title: "Community First",
+      description:
+        "Serving New York's diverse community with warmth and respect",
+    },
   ];
   return (
     <div className="relative min-h-screen">
@@ -44,10 +47,11 @@ export function AboutPage() {
         className="fixed inset-0 z-0"
       >
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/60 z-10"></div>
-            <img
-              src="/assets/banners/mainbanner.jpeg"
-              alt="Background"
-              className="w-full h-full object-cover"/>
+        <img
+          src="/assets/banners/mainbanner.jpeg"
+          alt="Background"
+          className="w-full h-full object-cover"
+        />
       </motion.div>
       {/* Content */}
       <div className="relative z-10">
@@ -84,9 +88,11 @@ export function AboutPage() {
                   transition={{ duration: 0.8 }}
                   className="relative h-[600px] rounded-2xl overflow-hidden shadow-2xl"
                 >
- <img src="/assets/banners/aboutuspic.jpg"
-          alt="Background"
-          className="w-full h-full object-cover"/>
+                  <img
+                    src="/assets/banners/aboutuspic.jpg"
+                    alt="Background"
+                    className="w-full h-full object-cover"
+                  />
                 </motion.div>
                 <motion.div
                   initial={{ opacity: 0, x: 50 }}
@@ -96,20 +102,25 @@ export function AboutPage() {
                 >
                   <h2 className="text-4xl mb-6">Our Story</h2>
                   <p>
-                    KHAO was born from a vision to bring authentic halal Chinese cuisine to New York, 
-                    infused with the rich flavors and traditions of Pakistan. Our name means "to eat" 
-                    in Urdu, reflecting our simple yet profound mission: to serve extraordinary food.
+                    KHAO was born from a vision to bring authentic halal Chinese
+                    cuisine to New York, infused with the rich flavors and
+                    traditions of Pakistan. Our name means "to eat" in Urdu,
+                    reflecting our simple yet profound mission: to serve
+                    extraordinary food.
                   </p>
                   <p>
-                    Our culinary team consists of master chefs trained in Pakistan's finest 5-star 
-                    hotels, where they perfected their craft over decades. They bring with them not 
-                    just technical excellence, but a deep understanding of how to balance bold Pakistani 
-                    spices with delicate Chinese cooking techniques.
+                    Our culinary team consists of master chefs trained in
+                    Pakistan's finest 5-star hotels, where they perfected their
+                    craft over decades. They bring with them not just technical
+                    excellence, but a deep understanding of how to balance bold
+                    Pakistani spices with delicate Chinese cooking techniques.
                   </p>
                   <p>
-                    Every dish at KHAO is 100% halal certified, prepared with ingredients sourced from 
-                    trusted suppliers. We believe that exceptional food should be accessible to everyone, 
-                    and we're proud to serve the Muslim community and food lovers across New York.
+                    Every dish at KHAO is 100% halal certified, prepared with
+                    ingredients sourced from trusted suppliers. We believe that
+                    exceptional food should be accessible to everyone, and we're
+                    proud to serve the Muslim community and food lovers across
+                    New York.
                   </p>
                 </motion.div>
               </div>
@@ -139,7 +150,9 @@ export function AboutPage() {
                   >
                     <div className="flex justify-center mb-6">{value.icon}</div>
                     <h3 className="text-2xl mb-4">{value.title}</h3>
-                    <p className="text-gray-600 leading-relaxed">{value.description}</p>
+                    <p className="text-gray-600 leading-relaxed">
+                      {value.description}
+                    </p>
                   </motion.div>
                 ))}
               </div>

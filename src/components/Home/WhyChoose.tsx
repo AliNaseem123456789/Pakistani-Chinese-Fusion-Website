@@ -1,7 +1,6 @@
-import { motion } from 'motion/react';
-import { useInView } from 'react-intersection-observer';
-import { ChefHat, Heart, Leaf, Sprout } from 'lucide-react';
-
+import { motion } from "motion/react";
+import { useInView } from "react-intersection-observer";
+import { ChefHat, Heart, Leaf, Sprout } from "lucide-react";
 
 export function WhyChoose() {
   const [ref, inView] = useInView({
@@ -12,25 +11,28 @@ export function WhyChoose() {
   const reasons = [
     {
       icon: <ChefHat className="w-16 h-16 text-red-600" />,
-      title: '5-Star Hotel Chefs',
-      description: 'Our culinary team, trained in prestigious 5-star international establishments, brings decades of expertise'
+      title: "5-Star Hotel Chefs",
+      description:
+        "Our culinary team, trained in prestigious 5-star international establishments, brings decades of expertise",
     },
     {
       icon: <Leaf className="w-16 h-16 text-green-600" />,
-      title: '100% Halal',
-      description: 'Certified halal ingredients and preparation methods ensuring authentic Muslim-friendly dining'
+      title: "100% Halal",
+      description:
+        "Certified halal ingredients and preparation methods ensuring authentic Muslim-friendly dining",
     },
     {
       icon: <Heart className="w-16 h-16 text-pink-600" />,
-      title: 'Unique Culinary Fusion',
-      description: 'Traditional South Asian flavors meet precise Chinese cooking techniques for a unique fusion experience.'
+      title: "Unique Culinary Fusion",
+      description:
+        "Traditional South Asian flavors meet precise Chinese cooking techniques for a unique fusion experience.",
     },
- {
-  icon: <Sprout className="w-16 h-16 text-green-600" />,
-  title: 'Freshly Prepared',
-  description: 'Every dish is cooked fresh after you order, using the highest quality ingredients to ensure the most vibrant, delicious.'
-}
-
+    {
+      icon: <Sprout className="w-16 h-16 text-green-600" />,
+      title: "Freshly Prepared",
+      description:
+        "Each dish is freshly prepared to order with the finest ingredients, delivering vibrant and delicious flavors.",
+    },
   ];
 
   const containerVariants = {
@@ -38,9 +40,9 @@ export function WhyChoose() {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.2
-      }
-    }
+        staggerChildren: 0.2,
+      },
+    },
   };
 
   const itemVariants = {
@@ -50,9 +52,9 @@ export function WhyChoose() {
       y: 0,
       transition: {
         duration: 0.6,
-        ease: 'easeOut'
-      }
-    }
+        ease: "easeOut",
+      },
+    },
   };
 
   return (
@@ -66,7 +68,8 @@ export function WhyChoose() {
         >
           <h2 className="text-5xl md:text-6xl mb-4">Why Choose KHAO?</h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Experience the perfect blend of Pakistani hospitality and Chinese culinary excellence
+            Experience the perfect blend of Pakistani hospitality and Chinese
+            culinary excellence
           </p>
         </motion.div>
 
@@ -85,12 +88,14 @@ export function WhyChoose() {
               <motion.div
                 className="flex justify-center mb-6"
                 whileHover={{ scale: 1.1, rotate: 5 }}
-                transition={{ type: 'spring', stiffness: 300 }}
+                transition={{ type: "spring", stiffness: 300 }}
               >
                 {reason.icon}
               </motion.div>
               <h3 className="text-2xl mb-4">{reason.title}</h3>
-              <p className="text-gray-600 leading-relaxed">{reason.description}</p>
+              <p className="text-gray-600 leading-relaxed">
+                {reason.description}
+              </p>
             </motion.div>
           ))}
         </motion.div>
